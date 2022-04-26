@@ -1,0 +1,82 @@
+#shapeanalysis.py analysis
+#This program computes the area of a triangle, rectangle, and circle
+#By Ashley Cook
+
+Analysis
+    I need a program that computes the area of a triangle, rectangle, and circle. The user will input specs about shapes so
+    the areas can be calculated.
+
+Specs
+    Triangle- Inputs(base, height)
+            - Outputs(area= 1/2 * base * height)
+    Rectangle- Inputs(width, height)
+            -Outputs(area= width * height)
+    Circle- Inputs(radius)
+            -Outputs(area= pi * radius**2)
+
+Design
+    import math
+    define triangle function (def areaTriangle)
+    return area of triangle when function called 
+    define rectangle function (def areaRectangle)
+    return area of rectangle when function called
+    define circle function
+    return area of circle when function called
+
+    def main()
+    print("This program computes the area of a triangle, rectangle, and circle")
+    prompt user for base and height of triangle
+    call areaTriangle
+    Print area
+    prompt user for width and height of rectangle
+    call areaRectangle
+    print area
+    prompt user for radius of circle
+    call areaCircle
+    print area
+
+Code
+    #shapeareas.py
+    #This program computes the area of a triangle, rectangle, and circle
+    #By Ashley Cook
+
+    import math
+
+
+    def areaTriangle(base, height):
+        area = 1/2 * base * height
+        return area
+
+    def areaRectangle(width, height):
+        area= width * height
+        return area
+
+    def areaCircle(radius):
+        area= math.pi * radius**2
+        return area
+
+    def main():
+        print("This program computes the area of a triangle, rectangle, and circle.")
+        print("")
+
+        print("Triangle")
+        base = float(input("Enter base:"))
+        theight = float(input("Enter height:"))
+        print("The area is=", "{:.2f}".format(areaTriangle(base, theight)))
+        print("")
+
+        print("Rectangle")
+        width = float(input("Enter width:"))
+        rheight = float(input("Enter height:"))
+        print("The area is=", "{:.2f}".format(areaRectangle(width, rheight)))
+        print("")
+
+        print("Circle")
+        radius = float(input("Enter radius:"))
+        print("the area is=","{:.2f}".format(areaCircle(radius)))
+
+
+Debugging
+    I designed the triangle part first. It took some time to figure out exactly how to get it to work. At first I wasn't defining how 
+    to get the area and to return the area when defining areaTriangle. After I figured this out, the rest went smoothly. My only other issue
+    was getting pi to work. I just needed to call the math library through math.pi
